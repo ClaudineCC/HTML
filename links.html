@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title> Trabalhando com links</title>
+    </head>
+
+    <body>
+        <p><a href="#fim">Ir para o final da página</a></p> <!-- trabalha em conjunto com ID -->
+        <a id="inicio"></a>
+
+        <h1>Elementos e atributos de links </h1>
+        <hr>
+        <h2>Tipos de links</h2>
+
+        <h3>Absoluto</h3>
+        <p>É aquele tipo de link em que colocamos o endereço (URL) completo na página a ser acessada.</p>
+        <!--sempre são utilizados para abrir links externos-->
+        <!-- o atributo href, indica o endereço do link-->
+        <!-- o atributo target indica de que maneira o link sera aberto-->
+             <p> <a href="https://www.sp.senac.br/" target="_blank">Visite o site do SENAC.</a></p>
+             <p> Visite o site do <a href="https://www.sp.senac.br/"> SENAC.</a> </p>
+             <p> Visite o site do <a href="https://www.sp.senac.br/">https://www.sp.senac.br/" </p>
+       
+
+        <hr>
+        <h3> Link Relativo</h3>
+        <p> É aquele link que abre em arquivo/página a ser acessado no próprio site que estamos trabalhando</p>
+        <p> Acesse o conteúdo anterior, clicando <a href="listas.html" target="_self">aqui</a></p>  <!-- self abre na mesma janela -->
+
+        <h3>E-mail e telefone</h3>
+        <p><b>E-mail: </b> link que abre um programa de e-mail instalado na maquina do usuario.</p>
+        <p>Contato de e-mail <a href="mailto:contato@gmail.com">contato@gmail.com</a></p>
+        <p>Contato por telefone <a href="tel: 1121350300">11-2135-0300</a></p>
+
+        <hr>
+        <h3>Falso/vazio</h3>
+        <p>Utilizado para simular o comportamento de link </p>
+        <p><a href="#"> Nenhum lugar</a></p>
+
+        <hr>
+        <h3>Link vertical</h3>
+        
+        <P> Usado para navegações por seções/areas localiza na mesma página</P>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus accusamus eum culpa officia consectetur dolore dolor, asperiores optio eveniet voluptas commodi odit esse aliquam odio! Quae laudantium alias pariatur quo?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, voluptas excepturi sit voluptatem architecto veniam earum hic vel quisquam corporis pariatur saepe, animi veritatis laudantium quod, facere odit sint porro!</p>
+
+        <!--<p><a href="#fim">Ir para o final da página</a></p> <!-- trabalha em conjunto com ID -->
+        <a id="fim"></a>  <!-- trabalha em conjunto -->
+
+        <p><a href="#inicio" >Ir para o topo</a></p>
+        <!-- <a href="#inicio> </a>"  direcionar para onde quer visualizar , no caso no começo da pagina>-->
+
+
+        <hr>
+        <h3> Link para download</h3>
+        <p>Usado para baixar um arquivo</p>
+        <p><a href="doc/apostila-web.pdf" download="">Baixe</a> a apostila web</p>
+        <p><a href="doc/apostila-web.pdf" target="_blank"> Baixe a apostila aqui</a></p>
+
+        
+
+
+
+
+
+    </body>
+
+</html>
+
+
