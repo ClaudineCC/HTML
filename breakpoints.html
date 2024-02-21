@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- se adapta /responsivo-->
+
+    <title>Renderizando as paginas em midia query</title>
+
+    <style>
+        body {
+            background-color: rgb(37, 16, 197);
+        }
+
+        h4 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+        }   
+
+        p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: 30px;
+
+
+        }
+
+       /* breakpoint menor para maior ate os valores definidos  
+
+        @media screen and (min-width:320px) { 
+            body {
+                background-color: green;
+            }
+
+            @media screen and (min-width:720px) { 
+            body {
+                background-color: rgb(190, 227, 24);
+            }
+
+            @media screen and (min-width:1400px) { 
+            body {
+                background-color: rgb(58, 0, 128);
+            }
+          
+        
+            
+        }
+        */
+
+        /* breakpoint maior ate zerar  os valores definidos*/
+
+        @media screen and (max-width:1400px) { 
+            body {
+                background-color:black;
+            }
+
+            @media screen and (max-width:720px) { 
+            body {
+                background-color:gray;
+            }
+
+            @media screen and (max-width:320px) { 
+            body {
+                background-color: brown;
+            }  */
+
+
+
+
+
+    </style>
+
+
+
+<body>
+    <h4>Renderizando as páginas em midia query</h4>
+
+    <p>Os breakpoints serão os seguintes: 320px, 720px, 1400px</p>
+
+
+</body>
+
+
+
+</head>
+
+</html>

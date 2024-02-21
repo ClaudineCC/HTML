@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- se adapta /responsivo-->
+
+
+    <title>@Media Query</title>
+
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        .tudo {
+            overflow: auto;
+            /* tras o conteudo pra dentro. quase um iframe, mas tras dentro de um elemento. Tras dois conteudos lista: conteudo 1a 5 e texto de conteudo de quebra*/
+        }
+
+
+        #list {
+            float: none;
+            /* flutua na pagina e coloco a posição; direita , esquerda, */
+            width: auto;
+            /* automatico se move conforme a viewport, */
+        }
+
+        #texto {
+            margin-left: 4px;
+
+        }
+
+        #menulist {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .menuitem {
+            background-color: aliceblue;
+            border: solid 1px #d4d4d4;
+            /* borda solida pq nao anda na tela, */
+            border-radius: 4px;
+            list-style-type: none;
+            margin: 4px;
+           
+            padding: 2px;
+            text-align: center;
+        }
+
+        .topnav{    
+            overflow: hidden;   /*o hidden deixa o conteudo esta dentro da caixa mas de forma oculta */    
+            background-color: gray;  
+        }
+
+        .topnav a{  /*a herf sao tres soltos na mesma linha MAS precisa criar um bloco para colocar todos dentro  */  
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;  /*aqui centralizou o a herf  */
+            text-decoration: none;
+            padding: 14px 16px;
+
+        }
+
+        .tudo a:hover{    /*mudar a cor da fonte quando o mouse passa em cima. modo celular nao funciona */
+            background-color: #ddd;
+            color: black;
+        }
+
+
+        
+
+        @media screen and (min-width:480px) {  /*screen muda o TAMANHO DA LARGURA que eu determinar "a partir de agora",
+            para todos componetes como mobile, tablet, desktop. precisa determinar tamanho primeiro. Ou seja,
+            se for maior que 480... tenha esse comportamento.
+            Ao usar o max-width a estrategia é o contrario de 480 ate 0 */ 
+            
+            body {
+                background-color: green;
+            }
+
+            #list {
+                width: 200px;
+                float: left;
+            }
+
+            #texto {
+                margin-left: 216px;
+                /* breakpoints */
+            }
+
+            
+        }
+
+
+        @media screen and (max-width:600px){  /*screen muda o TAMANHO DA LARGURA que eu determinar "a partir de agora" de 600 ate 0*/
+            .topnav a{
+             float: none;
+             width: 100%;    /*100% para ocupar a tela toda do celular*/
+            }
+                
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <h1>@media</h1>
+    <p>Regra introduzida em CSS2, possibilitou definir regras de estilos diferentes para diferentes tipos de mídia.</p>
+    <P>As consultas de mídia podem ser usadas para verificar muitas coisas, como:</P>
+    <ul>
+        <li>Largura e altura de viewport</li>
+        <li>Orientação da viewport (paisagem ou retrato)</li>
+        <li>Resolução grande, pequena, alta, baixa</li>
+    </ul>
+    <p>Usando consultas de mídia são uma técnica popular para oferecer um estilo personalizado Folha para desktops,
+        laptops, tablets e smartphones.(all, print ou screen)</p>
+    <p>Exemplos:</p>
+
+    <div class="tudo">
+        <div id="list">
+            <ul id="menulist">
+                <li class="menuitem">Conteúdo 1</li>
+                <li class="menuitem">Conteúdo 2</li>
+                <li class="menuitem">Conteúdo 3</li>
+                <li class="menuitem">Conteúdo 4</li>
+                <li class="menuitem">Conteúdo 5</li>
+            </ul>
+        </div>
+
+        <div id="texto">
+            <h2>Conteúdo de quebra<h2>
+                    <p>Quando determinamos as medidas em pixel das orientações de páginas, estamos falando dos chamados
+                        "breakpoints". Não existe limite para breakpoints mas de 480, 600, 900 ou a partir de 1000. Uso de ate 5 midia Query por projeto.</p>
+        </div>
+
+    </div>
+
+        <p> MENU</p>
+
+        <div class="topnav">
+            <a href="#">HOME</a>
+            <a href="#">MENU</a>
+            <a href="#">CONTATO</a>
+        </div>
+
+</body>
+
+</html>
