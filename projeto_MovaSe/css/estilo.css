@@ -23,6 +23,7 @@ h1,h2,h3,h4,p,figure{
 img{
     max-width:100%;
     }
+
 /* Regras do topo */
 #topo{
 background-color:rgba(24,56,29,0.9);
@@ -111,14 +112,7 @@ color: #7f7f80
     min-width:35px;
     width:35px;
 }
-.redes ul{
-    display: flex;
-    text-align:center;
-}
-.redes li{
-    width:15%;
-    padding:3%;
-}
+
 .assinatura{
     color:#fff;
     background-color: #7f7f80;
@@ -128,4 +122,124 @@ color: #7f7f80
 }
 .assinatura p{
     padding-top:3%;
+}
+
+/* Regras para a área do conteudo principal */
+
+.conteudo{
+    max-width: 95%;
+    margin: auto;  /* automatico para nao interferir nos elementos */
+}
+
+.conteudo article{
+    background-color: aliceblue;
+    margin: 15px 0;
+    padding: 1%;
+    box-shadow: grey 1px 1px 5px;  /* sombra */
+}
+
+.conteudo h2, .conteudo h3, .conteudo p{
+    padding: 1%;  /* padding em porcentagem permanece com mesma margem se aumentar eou diminuir a tela */
+}
+
+.titulo{
+    font-size: 1.4em;  /* em corresponde a pixel 1 ponto + 2 ou 3 ou 4...  e fica responsivo/se adapta  */
+    color: #ed6d19;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#destaque imagem{
+    border-bottom: dotted  #ed6d19 5px;   /* o dotted deixa a borda pontilhada. tem outros modelos em border-bottom  */
+}
+
+.text-destaque{
+    position: relative;    /* posicionamento  */
+    background-color: rgba(255,255,255,0.8);
+    height: 80px;
+    bottom: 110px;   /* posicionamento ao contrario */
+    margin-top: 5px;   
+   width: 100%;    /* ajusta conforme a alteração do tamanho da tela */
+}
+
+.text-destaque h2{
+    color: black !important;   /*ação no css onde ele vai cancelar todas as propriedades do h2 ja existente acima. senao DA CONFLITO */
+    margin-top: 5px;
+    padding: 5px 0 3px 50px;
+}
+
+.text-destaque p{
+    margin-top: 5px;
+    font-size: 1.1em;
+    padding: 0 0 5px 50px;
+}
+
+#frase{
+    color: #fff;
+    background-color:  #ed6d19;
+    text-align: center;
+    height: 80px;
+}
+
+#frase p{
+font-size: 1 em;
+padding:12px;
+}
+
+.card{
+    margin: 15px 0;
+    padding: 5%;
+}
+.card p{
+    text-align: center;
+    padding:1% 0 2% 0;
+}
+
+.card-conteudo figure{
+    margin: 1%;
+    position: relative;
+    box-shadow:  grey 1px 1px 5px;  /* sombra */
+}
+
+.card-conteudo figcaption{
+    position:absolute;
+    left:0;
+    bottom:20px;
+    width: 100%;  /* imagem responsiva */
+    background-color: rgba(127, 127, 128, 0.8);
+    color:white;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase; /* deixa o texto em caixa alta/maiuscula */
+}
+
+.card-conteudo figure img {
+    transition: 1s;  /* efeito de delay pra nao ficar brusco */
+    filter: opacity(1)  /* opacidade de 0 ate 1 */
+}
+
+.card-conteudo a:hover img, card-conteudo a:focus img{    /*  */
+    filter:opacity(0.6)
+}
+
+
+#titulo-video{
+    color: white;
+    padding: 15px;
+    
+}
+
+#video{
+    background-color: rgba(6,99,46,0.5);
+    text-align: center;
+    width:100%;
+
+}
+
+iframe{   /* como iframe é unico no codigo todo, pode puxar direto no seletor */
+    margin: auto;
+    max-width: 80%;
+    display:block;  /* ver modelos de display*/
+    padding: 2% 0;
 }
